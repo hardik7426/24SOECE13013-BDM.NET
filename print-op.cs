@@ -8,19 +8,21 @@ namespace BD_MAM
 {
     internal class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            int a = 0, b = 1, c = 0;
-            Console.Write(a + " " + b + " ");
-            while (true)
+            Console.Write("Enter number: ");
+            int n;
+            n = Convert.ToInt32(Console.ReadLine());
+            int a = 0;
+            int b = 1;
+            for (int i = 0; i <= n; i++)
             {
-                c = a + b;
-                if (c > 55)
-                    break;
-                Console.Write(c + " ");
+                Console.Write(a + " ");
+                int temp = a + b;
                 a = b;
-                b = c;
+                b = temp;
             }
+            Console.ReadLine();
         }
     }
 }

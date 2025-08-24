@@ -10,18 +10,20 @@ namespace BD_MAM
     {
         static void Main(string[] args)
         {
-            Console.Write("Enter mobile number: ");
-            string mobile = Console.ReadLine();
-
-            if (mobile.Length >= 5)
+            Console.Write("Enter Mobile Number: ");
+            string m = Console.ReadLine();
+            if (m.Length > 5)
             {
-                string masked = mobile.Substring(0, mobile.Length - 5) + new string('X', 5);
-                Console.WriteLine("Masked Number: " + masked);
+                string firstPart = m.Substring(0, m.Length - 5);
+                string lastPart = new string('X', 5);
+                string maskedNumber = firstPart + lastPart;
+                Console.WriteLine("Masked Mobile Number: " + maskedNumber);
             }
             else
             {
-                Console.WriteLine("Invalid number");
+                Console.WriteLine("Mobile number is short.");
             }
+            Console.ReadLine();
         }
     }
 }
